@@ -2,15 +2,14 @@
 
 Summary:	ALSA wrapper for Python
 Name:		python-alsaaudio
-Version:	0.6
-Release:	%mkrel 2
-Source0:	http://downloads.sourceforge.net/%{fname}/%{fname}-%{version}.tar.gz
+Version:	0.9.2
+Release:	1
+Source0:	https://files.pythonhosted.org/packages/source/p/pyalsaaudio/pyalsaaudio-%{version}.tar.gz
 License:	Python
 URL:		http://sourceforge.net/projects/pyalsaaudio/
 Group:		Development/Python
-BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 BuildRequires:	python-devel
-BuildRequires:	alsa-lib-devel
+BuildRequires:	pkgconfig(alsa)
 
 %description
 The goal of this project is to provide a functionality complete Python
@@ -18,19 +17,16 @@ wrapper for ALSA. Currently PCM playback and capture, as well as the
 mixer API is supported.
 
 %prep
-%setup -q -n %{fname}-%{version}
+%autosetup -p1 -n %{fname}-%{version}
 
 %build
-CFLAGS="%{optflags}" python setup.py build
+%py_build
 
 %install
-python setup.py install --root=%{buildroot}
-
-%clean
-rm -rf %{buildroot}
+%py_install
 
 %files
 %defattr(-,root,root)
-%doc LICENSE CHANGES README TODO
-%{py_platsitedir}/alsaaudio.so
+%doc LICENSE TODO
+%{py_platsitedir}/alsaaudio*.so
 %{py_platsitedir}/%{fname}-%{version}-py%{pyver}.egg-info
