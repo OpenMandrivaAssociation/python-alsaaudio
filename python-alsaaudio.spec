@@ -9,6 +9,7 @@ License:	Python
 URL:		http://sourceforge.net/projects/pyalsaaudio/
 Group:		Development/Python
 BuildRequires:	python-devel
+BuildRequires:	python%{pyver}dist(setuptools)
 BuildRequires:	pkgconfig(alsa)
 
 %description
