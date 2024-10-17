@@ -6,7 +6,7 @@ Version:	0.11.0
 Release:	1
 Source0:	https://files.pythonhosted.org/packages/source/p/pyalsaaudio/pyalsaaudio-%{version}.tar.gz
 License:	Python
-URL:		http://sourceforge.net/projects/pyalsaaudio/
+URL:		https://sourceforge.net/projects/pyalsaaudio/
 Group:		Development/Python
 BuildRequires:	python-devel
 BuildRequires:	python%{pyver}dist(setuptools)
