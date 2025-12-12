@@ -3,7 +3,7 @@
 Summary:	ALSA wrapper for Python
 Name:		python-alsaaudio
 Version:	0.11.0
-Release:	1
+Release:	2
 Source0:	https://files.pythonhosted.org/packages/source/p/pyalsaaudio/pyalsaaudio-%{version}.tar.gz
 License:	Python
 URL:		https://sourceforge.net/projects/pyalsaaudio/
