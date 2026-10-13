@@ -8,7 +8,7 @@ Source0:	https://files.pythonhosted.org/packages/source/p/pyalsaaudio/pyalsaaudi
 License:	Python
 URL:		https://sourceforge.net/projects/pyalsaaudio/
 Group:		Development/Python
-BuildRequires:	python-devel
+BuildRequires:	pkgconfig(python3)
 BuildRequires:	python%{pyver}dist(setuptools)
 BuildRequires:	pkgconfig(alsa)
 
